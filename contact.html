@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Pathfinder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a class="nav-brand" href="index.html">
+      <img src="Klest_Logo.png" alt="Pathfinder Logo" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-name">PATH<span>FINDER</span></span>
+        <span class="brand-tagline">Find Your Path to Success</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="features.html">Features</a>
+        <div class="dropdown">
+          <a href="features.html#quiz-section">🎯 Career Quiz</a>
+          <a href="features.html#uni-section">🏛️ University Guide</a>
+          <a href="features.html#skill-section">📈 Skill Tracking</a>
+          <a href="features.html#streak-section">🔥 Study Streaks</a>
+        </div>
+      </li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="quiz.html" class="nav-cta">Try the Quiz ✦</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE -->
+  <div class="page-wrapper">
+    <div class="container">
+
+      <!-- Page hero -->
+      <section class="page-hero reveal">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h1 class="section-title">Let's build the <span class="accent">future together.</span></h1>
+        <p class="section-subtitle">Students, schools, or employers — we'd love to hear from you.</p>
+      </section>
+
+      <!-- Contact grid -->
+      <div class="contact-grid">
+
+        <!-- Left: info -->
+        <div class="contact-info reveal">
+          <p>Whether you're a student who wants early access, a school interested in partnering with us, or an employer looking to reach our users — reach out and let's talk.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">pathfinder@app.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🏫</div>
+              <div>
+                <div class="contact-label">School</div>
+                <div class="contact-value">HTL Peter Mahringer</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🤝</div>
+              <div>
+                <div class="contact-label">Partnerships</div>
+                <div class="contact-value">partnerships@pathfinder.app</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📸</div>
+              <div>
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">@pathfinderapp</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🎵</div>
+              <div>
+                <div class="contact-label">TikTok</div>
+                <div class="contact-value">@pathfinderapp</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-box reveal">
+          <div id="contactForm">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input class="form-input" type="text" placeholder="e.g. Alex Müller" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" type="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">I am a…</label>
+              <select class="form-select">
+                <option value="">Select one</option>
+                <option>Student</option>
+                <option>Teacher / School</option>
+                <option>Employer / Company</option>
+                <option>Investor</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitForm()">Send Message ✦</button>
+          </div>
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Message sent!</div>
+            <div class="success-body">Thanks for reaching out. We'll get back to you as soon as possible.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <img  src="Klest_Logo.png" alt="Pathfinder Logo" class="footer-logo" />
+      <span class="footer-brand-name">PATH<span>FINDER</span></span>
+    </div>
+    <span class="footer-copy">© 2025 Pathfinder · ITP School Project</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    function submitForm() {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

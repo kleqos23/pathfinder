@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works – Pathfinder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <a class="nav-brand" href="index.html">
+      <img src="Klest_Logo.png" alt="Pathfinder Logo" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-name">PATH<span>FINDER</span></span>
+        <span class="brand-tagline">Find Your Path to Success</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="features.html">Features</a>
+        <div class="dropdown">
+          <a href="features.html#quiz-section">🎯 Career Quiz</a>
+          <a href="features.html#uni-section">🏛️ University Guide</a>
+          <a href="features.html#skill-section">📈 Skill Tracking</a>
+          <a href="features.html#streak-section">🔥 Study Streaks</a>
+        </div>
+      </li>
+      <li><a href="how-it-works.html" class="active">How It Works</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quiz.html" class="nav-cta">Try the Quiz ✦</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <section class="page-hero reveal">
+        <div class="section-eyebrow">The Process</div>
+        <h1 class="section-title">From quiz to career <span class="accent">in four steps.</span></h1>
+        <p class="section-subtitle">Pathfinder turns self-discovery into a clear, actionable roadmap — no guesswork, no overwhelm.</p>
+      </section>
+
+      <div class="steps-grid">
+        <div class="steps-list">
+          <div class="step-item reveal">
+            <div class="step-num">01</div>
+            <div>
+              <div class="step-title">Take the Career Quiz</div>
+              <div class="step-desc">Answer 10 questions about your skills, interests, personality and values. It takes about 5 minutes and there are no right or wrong answers — just honest ones.</div>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-num">02</div>
+            <div>
+              <div class="step-title">Get Your Career Matches</div>
+              <div class="step-desc">Instantly receive a ranked list of careers best suited to you, each with a compatibility score, salary overview, day-to-day description, and growth potential.</div>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-num">03</div>
+            <div>
+              <div class="step-title">Explore Paths &amp; Requirements</div>
+              <div class="step-desc">Pick a career and explore which universities and employers are right for you. See every skill and qualification required, and exactly how many you already have.</div>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-num">04</div>
+            <div>
+              <div class="step-title">Learn, Track &amp; Achieve</div>
+              <div class="step-desc">Follow personalised learning roadmaps, build skills daily with our tracker, and stay motivated with streaks and milestone badges along the way.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive quiz preview -->
+        <div class="quiz-preview-panel reveal">
+          <div class="preview-step-label">Question 2 of 5 — Live Preview</div>
+          <div class="preview-question">What type of work environment energizes you most?</div>
+          <div class="preview-options">
+            <div class="preview-opt" onclick="pickOpt(this)">🎨 Creative &amp; open-ended projects</div>
+            <div class="preview-opt selected" onclick="pickOpt(this)">🔬 Analytical &amp; problem-solving</div>
+            <div class="preview-opt" onclick="pickOpt(this)">👥 Collaborative &amp; people-focused</div>
+            <div class="preview-opt" onclick="pickOpt(this)">📋 Structured &amp; organised</div>
+          </div>
+          <div class="preview-progress">
+            <div class="preview-prog-labels">
+              <span>Progress</span>
+              <span id="progPct">40%</span>
+            </div>
+            <div class="preview-prog-track">
+              <div class="preview-prog-fill" id="progFill" style="width:40%"></div>
+            </div>
+          </div>
+          <a href="quiz.html" class="btn btn-gold" style="margin-top:24px;width:100%;justify-content:center;">Take the Real Quiz ✦</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">
+      <img  src="Klest_Logo.png" alt="Pathfinder Logo" class="footer-logo" />
+      <span class="footer-brand-name">PATH<span>FINDER</span></span>
+    </div>
+    <span class="footer-copy">© 2025 Pathfinder · ITP School Project</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    /* Pick option in preview */
+    function pickOpt(el) {
+      el.closest('.preview-options').querySelectorAll('.preview-opt').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+    }
+  </script>
+</body>
+</html>

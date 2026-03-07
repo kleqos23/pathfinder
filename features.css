@@ -1,0 +1,315 @@
+/* ============================================================
+   FEATURES PAGE — features.css
+   ============================================================ */
+
+/* ── Page hero ── */
+.page-hero {
+  padding: 80px 0 64px;
+  text-align: center;
+}
+
+.page-hero .section-eyebrow {
+  margin: 0 auto 16px;
+}
+
+.page-hero .section-subtitle {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Feature detail blocks ── */
+.feature-block {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.feature-block.reverse {
+  direction: rtl;
+}
+
+.feature-block.reverse > * {
+  direction: ltr;
+}
+
+.feature-block.shaded {
+  background: var(--off-white);
+  margin: 0 -64px;
+  padding: 80px 64px;
+}
+
+.feat-block-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #a07000;
+  background: var(--gold-pale);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+}
+
+.feat-block-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.feat-block-title .accent {
+  color: var(--gold);
+}
+
+.feat-block-body {
+  font-size: 0.97rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.feat-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feat-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.feat-point::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* Visual panels */
+.visual-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Skill tracking section with photo background */
+.feature-block.shaded {
+  background:
+    linear-gradient(rgba(13, 28, 46, 0.72), rgba(13, 28, 46, 0.72)),
+    url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1400&q=80') center/cover no-repeat;
+  margin: 0 -64px;
+  padding: 80px 64px;
+  border-radius: 0;
+}
+
+/* Override text colors inside shaded (dark) section */
+.feature-block.shaded .feat-block-tag {
+  background: rgba(242, 171, 70, 0.2);
+  border-color: rgba(242, 171, 70, 0.4);
+  color: var(--gold-light);
+}
+
+.feature-block.shaded .feat-block-title {
+  color: var(--white);
+}
+
+.feature-block.shaded .feat-block-body {
+  color: rgba(247, 252, 254, 0.75);
+}
+
+.feature-block.shaded .feat-point {
+  color: rgba(247, 252, 254, 0.75);
+}
+
+.feature-block.shaded .feat-point::before {
+  background: var(--gold);
+}
+
+.visual-panel .panel-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Skill tracker visual */
+.skill-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-row-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-row-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.skill-row-pct {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.skill-bar-track {
+  height: 8px;
+  background: var(--off-white);
+  border-radius: 4px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+/* Streak calendar visual */
+.streak-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.streak-day {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.streak-day.done {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.streak-day.today {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.streak-count-big {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: var(--navy);
+  text-align: center;
+  margin: 20px 0 4px;
+}
+
+.streak-count-big span {
+  color: var(--gold);
+}
+
+.streak-caption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Roadmap visual */
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.roadmap-step {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  position: relative;
+}
+
+.roadmap-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 44px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.roadmap-dot {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: var(--gold-pale);
+  border: 2px solid rgba(242,171,70,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--gold);
+  z-index: 1;
+}
+
+.roadmap-dot.done {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.roadmap-text-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.roadmap-text-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .feature-block,
+  .feature-block.reverse { grid-template-columns: 1fr; gap: 40px; }
+  .feature-block.shaded  { margin: 0; padding: 60px 28px; }
+  .feature-block.shaded .container { grid-template-columns: 1fr !important; }
+  .visual-panel { width: 100%; }
+}
+@media (max-width: 900px) {
+  #skill-section .container {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    gap: 36px !important;
+  }
+}

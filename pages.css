@@ -1,0 +1,602 @@
+/* ============================================================
+   INNER PAGES SHARED CSS — pages.css
+   Used by: about, how-it-works, pricing, contact
+   ============================================================ */
+
+/* ── Page hero (shared) ── */
+.page-hero {
+  padding: 80px 0 64px;
+  text-align: center;
+}
+
+.page-hero .section-eyebrow {
+  margin: 0 auto 16px;
+}
+
+.page-hero .section-subtitle {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+  padding: 0 0 100px;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: default;
+  transition: all 0.25s;
+}
+
+.step-item:last-child {
+  border-bottom: none;
+}
+
+.step-item:hover .step-num {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.step-num {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: all 0.3s;
+}
+
+.step-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+
+.step-desc {
+  font-size: 0.86rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+/* Quiz preview panel */
+.quiz-preview-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 100px;
+}
+
+.preview-step-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.preview-question {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.preview-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preview-opt {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preview-opt:hover,
+.preview-opt.selected {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+  color: var(--navy);
+}
+
+.preview-progress {
+  margin-top: 24px;
+}
+
+.preview-prog-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 7px;
+}
+
+.preview-prog-track {
+  height: 6px;
+  background: var(--off-white);
+  border-radius: 3px;
+}
+
+.preview-prog-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--gold);
+  transition: width 0.5s ease;
+}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.about-body p {
+  font-size: 0.97rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.team-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(242, 171, 70, 0.4);
+}
+
+.team-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin: 0 auto 12px;
+}
+
+.team-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.team-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* Mission box */
+.mission-box {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-box::after {
+  content: '🧭';
+  position: absolute;
+  right: -14px;
+  bottom: -24px;
+  font-size: 8rem;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.mission-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.mission-quote {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.mission-values {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mission-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(247, 252, 254, 0.7);
+  line-height: 1.5;
+}
+
+.mission-value::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   PRICING PAGE
+   ============================================================ */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.price-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.price-card.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  transform: scale(1.03);
+}
+
+.price-card.featured:hover {
+  transform: scale(1.03) translateY(-4px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.price-tier {
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.price-card.featured .price-tier {
+  color: var(--gold);
+}
+
+.price-amount {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2.6rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.price-card.featured .price-amount {
+  color: var(--white);
+}
+
+.price-amount .per {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.price-desc {
+  font-size: 0.83rem;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.price-card.featured .price-desc {
+  color: rgba(247, 252, 254, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.price-feats {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.price-feats li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.price-card.featured .price-feats li {
+  color: rgba(247, 252, 254, 0.75);
+}
+
+.price-feats li::before {
+  content: '✓';
+  font-weight: 800;
+  color: var(--gold);
+  font-size: 0.85rem;
+  min-width: 14px;
+}
+
+.btn-price {
+  width: 100%;
+  padding: 13px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: all 0.25s;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--navy);
+}
+
+.btn-price:hover {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-price.gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.btn-price.gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  padding-bottom: 100px;
+}
+
+.contact-info p {
+  font-size: 0.97rem;
+  color: var(--text-soft);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(242, 171, 70, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.contact-value {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+.contact-form-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 38px;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 7px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: var(--off-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  color: var(--navy);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--gold);
+  background: var(--card);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 114px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  background: var(--navy-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(19, 39, 63, 0.2);
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 28px;
+}
+
+.form-success .success-icon  { font-size: 2.5rem; margin-bottom: 12px; }
+.form-success .success-title { font-family:'Syne',sans-serif; font-weight:800; font-size:1.2rem; color:var(--navy); margin-bottom:8px; }
+.form-success .success-body  { font-size:0.9rem; color:var(--text-soft); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .steps-grid,
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .price-card.featured { transform: scale(1); }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}

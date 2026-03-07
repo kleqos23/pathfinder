@@ -1,0 +1,371 @@
+/* ============================================================
+   HOME PAGE — index.css
+   ============================================================ */
+
+/* ── Hero section ── */
+.hero {
+  padding: 100px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(242, 171, 70, 0.4);
+  color: #a07000;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1.2;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.hero-title .accent {
+  color: var(--gold);
+}
+
+.hero-body {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.stat-number {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--navy);
+}
+
+.stat-number .accent {
+  color: var(--gold);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* ── App card (hero right column) ── */
+.hero-visual {
+  position: relative;
+}
+
+.app-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.app-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy);
+}
+
+.app-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Match bars */
+.match-card {
+  background: var(--gold-pale);
+  border: 1px solid rgba(242, 171, 70, 0.3);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.match-card.secondary {
+  background: var(--off-white);
+  border-color: var(--border);
+}
+
+.match-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #a07000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.match-card.secondary .match-label {
+  color: var(--text-muted);
+}
+
+.match-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.bar-track {
+  height: 6px;
+  background: rgba(19, 39, 63, 0.08);
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.bar-fill.secondary {
+  background: linear-gradient(90deg, #b0c8e8, #d0dff0);
+}
+
+.match-pct {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.match-pct.gold  { color: var(--gold); }
+.match-pct.grey  { color: var(--text-muted); }
+
+/* Skill pills */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.skill-pill {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+/* Streak row */
+.streak-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-top: 14px;
+}
+
+.streak-icon { font-size: 1.5rem; }
+
+.streak-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+}
+
+.streak-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Floating chips */
+.chip {
+  position: absolute;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 9px 16px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+  white-space: nowrap;
+  animation: float 4s ease-in-out infinite;
+}
+
+.chip-top   { top: -18px; right: 16px; }
+.chip-bot   { bottom: -16px; left: -8px; animation-delay: 1.2s; }
+
+/* ── Features strip ── */
+.features-strip {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.feat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all 0.3s;
+}
+
+.feat-card:hover {
+  border-color: rgba(242, 171, 70, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feat-card.dark {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.feat-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gold-pale);
+  border: 1px solid rgba(242, 171, 70, 0.3);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.feat-card.dark .feat-icon {
+  background: rgba(242, 171, 70, 0.15);
+  border-color: rgba(242, 171, 70, 0.3);
+}
+
+.feat-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.feat-card.dark .feat-title { color: var(--white); }
+
+.feat-desc {
+  font-size: 0.86rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.feat-card.dark .feat-desc { color: rgba(247,252,254,0.6); }
+
+/* ── CTA banner ── */
+.cta-banner {
+  padding: 80px 0;
+}
+
+.cta-inner {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-inner::after {
+  content: '🧭';
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  font-size: 9rem;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.cta-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.cta-body {
+  color: rgba(247,252,254,0.6);
+  font-size: 0.95rem;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero            { grid-template-columns: 1fr; gap: 40px; padding: 80px 0 60px; }
+  .features-grid   { grid-template-columns: 1fr 1fr; }
+  .cta-inner       { flex-direction: column; padding: 40px 28px; text-align: center; }
+  .hero-visual     { display: none; }
+}
+
+@media (max-width: 600px) {
+  .features-grid { grid-template-columns: 1fr; }
+}
